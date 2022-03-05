@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useSession } from "next-auth/client";
 import Head from "next/head";
 import Link from "next/link";
-import Router, { useRouter } from "next/router";
+import  { useRouter } from "next/router";
 import { RichText } from "prismic-dom";
 import { useEffect } from "react";
 import { getPrismicClient } from "../../../services/prismic";
@@ -56,9 +56,8 @@ export default function PostPreview({ post }: PostPreviewProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
     return {
-        paths: [
+        paths: [],
             // { params: {slug: 'serveless-quando-utilizar'}}
-        ],
         fallback: 'blocking'
         // para uma rota ainda não gerada statica
         // true -> carrega do lado do cliente 
